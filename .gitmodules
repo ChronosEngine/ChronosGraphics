@@ -1,3 +1,6 @@
 [submodule ".\\ThirdParty\\glfw\\glfw"]
 	path = .\\ThirdParty\\glfw\\glfw
 	url = https://github.com/glfw/glfw
+[submodule "ThirdParty/glfw/glfw"]
+	path = ThirdParty/glfw/glfw
+	url = https://github.com/glfw/glfw

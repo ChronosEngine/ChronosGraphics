@@ -2,7 +2,9 @@
 #include "Window.hpp"
 #include "Platform.hpp"
 
-#include "DX12/DX12_RenderDevice.hpp"
+#ifdef _WIN32
+    #include "DX12/DX12_RenderDevice.hpp"
+#endif
 #include "GLES/GLES_RenderDevice.hpp"
 #include "Vulkan/Vulkan_RenderDevice.hpp"
 
@@ -47,11 +49,12 @@ CreateRenderDevice(
         case RenderType::Vulkan:
             return new Vulkan_RenderDevice(windowName);
         break;
-
+        
+#ifdef _WIN32
         case RenderType::DX12:
             return new DX12_RenderDevice(windowName);
         break;
-
+#endif
         case RenderType::GLES:
             return new GLES_RenderDevice(windowName);
         break;
@@ -60,10 +63,12 @@ CreateRenderDevice(
         case RenderType::Recommended:
             switch(currentPlatform)
             {
+
+#ifdef _WIN32
                 case ChronosPlatform::Windows:
                     return new DX12_RenderDevice(windowName);
                 break;
-
+#endif
                 case ChronosPlatform::MacOS:
                     return new GLES_RenderDevice(windowName);
                 break;

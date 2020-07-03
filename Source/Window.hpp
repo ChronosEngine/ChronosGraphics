@@ -1,7 +1,7 @@
 #ifndef __CHRONOS_GRAPHICS_WINDOW_HPP__
 #define __CHRONOS_GRAPHICS_WINDOW_HPP__
 
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 /** A window abstraction from glfw3 */
 class Window

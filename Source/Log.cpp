@@ -23,7 +23,7 @@ void Log::LogAssert(const bool assertation, const std::string context, const std
         std::cout << "Assertation Failed | " << context << ": " << message << std::endl;
         
         // Pause the program
-        std::cin.clear(); std::cin.ignore(INT_MAX, '\n');
+        std::cin.clear(); std::cin.ignore(INT64_MAX, '\n');
         std::cin.get();
     }
 #endif

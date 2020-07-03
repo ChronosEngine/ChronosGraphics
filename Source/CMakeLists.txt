@@ -6,12 +6,13 @@ set(Sources
     "Pipeline.cpp"
 )
 
-
-if(CHRONOS_GRAPHICS_HAS_DX12)
-    list(APPEND Sources
-        "DX12/DX12_RenderDevice.cpp"
-        "DX12/DX12_Pipeline.cpp"
-    )
+if(WIN32)
+    if(CHRONOS_GRAPHICS_HAS_DX12)
+        list(APPEND Sources
+            "DX12/DX12_RenderDevice.cpp"
+            "DX12/DX12_Pipeline.cpp"
+        )
+    endif()
 endif()
 
 if(CHRONOS_GRAPHICS_HAS_GLES)
