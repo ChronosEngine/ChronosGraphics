@@ -1,0 +1,33 @@
+{
+	"Name": "Default Pipeline",
+	"Elements": [
+		{
+			"POSITION": "Vec3"
+		},
+		{
+			"COLOR": "Vec3"
+		}
+	],
+	"Files": [
+		{
+			"Vertex": [
+				{
+					"HLSL": "defaultVertex.hlsl"
+				},
+				{
+					"GLSL": "defaultVertex.glsl"
+				}
+			]
+		},
+		{
+			"Fragment": [
+				{
+					"HLSL": "defaultFragment.hlsl"
+				},
+				{
+					"GLSL": "defaultFragment.glsl"
+				}
+			]
+		}
+	]
+}
