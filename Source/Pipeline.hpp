@@ -5,6 +5,7 @@ class RenderDevice;
 class Shader;
 
 #include <string>
+#include <vector>
 
 /** Shaders that group together */
 class Pipeline
@@ -20,17 +21,18 @@ public:
         const std::string pipelinePath);
 
 public:
-    virtual void LoadPipelineFromFile();
-
-public:
     /** Default Destructor */
     virtual ~Pipeline();
+
+public:
+    std::vector<std::pair<std::string, std::string>> Elements;
 
 };
 
 // Default.pipeline (Pseudofile)
 
 /*
+
 {
 	"Name": "Default Pipeline",
 	"Elements": [
@@ -50,6 +52,7 @@ public:
         }
 	]
 }
+
 */
 
 #endif // __CHRONOS_GRAPHICS_PIPELINE_HPP__

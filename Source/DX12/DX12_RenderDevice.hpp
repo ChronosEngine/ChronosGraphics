@@ -35,7 +35,14 @@ public:
         const char* windowName);
 
 public:
+    /** Default Destructor */
     ~DX12_RenderDevice();
+
+public:
+    /** Create a DX12 pipeline object */
+    Pipeline*
+    CreatePipeline(
+        const std::string pipelinePath);
 
 private:
     static const UINT FrameCount = 2;

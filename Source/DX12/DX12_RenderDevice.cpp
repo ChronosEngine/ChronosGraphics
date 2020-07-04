@@ -2,6 +2,7 @@
 
 #include <vector>
 
+#include "DX12_Pipeline.hpp"
 #include "../Log.hpp"
 
 void GetBestHardwareAdapter(IDXGIFactory7* pFactory, IDXGIAdapter1** ppAdapter);
@@ -155,6 +156,12 @@ DX12_RenderDevice::~DX12_RenderDevice()
     
 }
 
+Pipeline*
+DX12_RenderDevice::CreatePipeline(
+    const std::string pipelinePath)
+{
+    return new DX12_Pipeline(this, pipelinePath);
+}
 
 ////////// Helper Functions //////////
 void GetBestHardwareAdapter(IDXGIFactory7* pFactory, IDXGIAdapter1** ppAdapter)

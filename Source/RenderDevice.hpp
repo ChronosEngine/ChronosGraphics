@@ -1,8 +1,10 @@
 #ifndef __CHRONOS_GRAPHICS_RENDERDEVICE_HPP__
 #define __CHRONOS_GRAPHICS_RENDERDEVICE_HPP__
 
-// Forward Decs
+#include <string>
+
 class Window;
+class Pipeline;
 
 struct RenderType
 {
@@ -34,7 +36,11 @@ public:
     ~RenderDevice();
 
 public:
-    
+    /** Creates a pipeline object */
+    virtual 
+    Pipeline* 
+    CreatePipeline(
+        std::string pipelinePath);
 
 public:
     virtual 

@@ -1,10 +1,14 @@
 #include "RenderDevice.hpp"
-#include "Window.hpp"
+
 #include "Platform.hpp"
+#include "Window.hpp"
+#include "Pipeline.hpp"
+
 
 #ifdef _WIN32
     #include "DX12/DX12_RenderDevice.hpp"
 #endif
+
 #include "GLES/GLES_RenderDevice.hpp"
 #include "Vulkan/Vulkan_RenderDevice.hpp"
 
@@ -28,6 +32,13 @@ RenderDevice::~RenderDevice()
     
 }
 
+Pipeline*
+RenderDevice::CreatePipeline(
+    std::string pipelinePath)
+{
+    return new Pipeline(this, pipelinePath); // If there is no render device just give the base pipeline with no code
+}
+
 Window* 
 RenderDevice::getWindow()
 {
@@ -39,7 +50,6 @@ CreateRenderDevice(
     const RenderType::Enum renderType,
     const char* windowName)
 {
-
     switch(renderType)
     {
         case RenderType::NoRender:
@@ -87,8 +97,5 @@ CreateRenderDevice(
         default:
             return new RenderDevice(windowName);
         break;
-
-
     };
-
 }
