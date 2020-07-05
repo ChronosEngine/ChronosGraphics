@@ -8,26 +8,14 @@
 			"COLOR": "Vec3"
 		}
 	],
-	"Files": [
-		{
-			"Vertex": [
-				{
-					"HLSL": "defaultVertex.hlsl"
-				},
-				{
-					"GLSL": "defaultVertex.glsl"
-				}
-			]
+	"Files": {
+		"Vertex": {
+			"HLSL": "testing.hlsl",
+			"GLSL": "defaultVertex.glsl"
 		},
-		{
-			"Fragment": [
-				{
-					"HLSL": "defaultFragment.hlsl"
-				},
-				{
-					"GLSL": "defaultFragment.glsl"
-				}
-			]
+		"Fragment": {
+			"HLSL": "testing.hlsl",
+			"GLSL": "defaultFragment.glsl"
 		}
-	]
+	}
 }

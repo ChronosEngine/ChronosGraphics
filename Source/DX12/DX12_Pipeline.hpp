@@ -16,6 +16,8 @@
 using namespace DirectX;
 using namespace Microsoft::WRL;
 
+class DX12_RenderDevice;
+
 class DX12_Pipeline
     : public Pipeline
 {
@@ -36,6 +38,8 @@ public:
 private:
     ComPtr<ID3DBlob> vertexShader;
     ComPtr<ID3DBlob> fragmentShader; // Pixel Shader
+
+    DX12_RenderDevice* renderDevice;
 
 };
 

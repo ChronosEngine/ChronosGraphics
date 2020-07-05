@@ -49,7 +49,7 @@ private:
 
     D3D12_VIEWPORT m_viewport;
     D3D12_RECT scissorRect;
-    ComPtr<ID3D12Device> dxDevice;
+    ComPtr<ID3D12Device6> dxDevice;
     ComPtr<ID3D12CommandQueue> dxCommandQueue;
     ComPtr<IDXGISwapChain3> dxgiSwapChain;
     ComPtr<ID3D12DescriptorHeap> dxRtvHeap;

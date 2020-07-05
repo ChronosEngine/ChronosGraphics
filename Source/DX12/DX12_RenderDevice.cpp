@@ -63,7 +63,7 @@ DX12_RenderDevice::DX12_RenderDevice(
         ComPtr<IDXGIAdapter1> hardwareAdapter;
         GetBestHardwareAdapter(factory.Get(), &hardwareAdapter);
 
-        if(!SUCCEEDED(D3D12CreateDevice(hardwareAdapter.Get(), D3D_FEATURE_LEVEL_12_0, IID_PPV_ARGS(&dxDevice))))
+        if(!SUCCEEDED(D3D12CreateDevice(hardwareAdapter.Get(), D3D_FEATURE_LEVEL_12_1, IID_PPV_ARGS(&dxDevice))))
         {
             Log::LogError("DX12 Render Device", "Could not create the DX12 device!");
         }
