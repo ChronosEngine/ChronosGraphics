@@ -70,7 +70,7 @@ public:
     getWindowOpacity();
 
 public:
-    GLFWwindow* windowHandle;
+    GLFWwindow* m_windowHandle;
 
 };
 

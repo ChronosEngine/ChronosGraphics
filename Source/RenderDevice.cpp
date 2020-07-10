@@ -4,11 +4,6 @@
 #include "Window.hpp"
 #include "Pipeline.hpp"
 
-
-#ifdef _WIN32
-    #include "DX12/DX12_RenderDevice.hpp"
-#endif
-
 #include "GLES/GLES_RenderDevice.hpp"
 #include "Vulkan/Vulkan_RenderDevice.hpp"
 
@@ -42,7 +37,7 @@ RenderDevice::CreatePipeline(
 Window* 
 RenderDevice::getWindow()
 {
-    return renderWindow;
+    return m_renderWindow;
 }
 
 RenderDevice*
@@ -60,11 +55,6 @@ CreateRenderDevice(
             return new Vulkan_RenderDevice(windowName);
         break;
         
-#ifdef _WIN32
-        case RenderType::DX12:
-            return new DX12_RenderDevice(windowName);
-        break;
-#endif
         case RenderType::GLES:
             return new GLES_RenderDevice(windowName);
         break;
@@ -74,11 +64,6 @@ CreateRenderDevice(
             switch(currentPlatform)
             {
 
-#ifdef _WIN32
-                case ChronosPlatform::Windows:
-                    return new DX12_RenderDevice(windowName);
-                break;
-#endif
                 case ChronosPlatform::MacOS:
                     return new GLES_RenderDevice(windowName);
                 break;

@@ -50,9 +50,7 @@ public:
 
 
 protected:
-    Window* renderWindow;
-
-    friend class DX12_RenderDevice;
+    Window* m_renderWindow;
 
 };
 

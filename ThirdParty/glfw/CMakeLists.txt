@@ -4,8 +4,4 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 
-if(WIN32)
-    add_compile_definitions(-DGLFW_EXPOSE_NATIVE_WIN32)
-endif()
-
 add_subdirectory(glfw)

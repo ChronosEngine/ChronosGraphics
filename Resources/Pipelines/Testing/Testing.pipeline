@@ -10,11 +10,11 @@
 	],
 	"Files": {
 		"Vertex": {
-			"HLSL": "testing.hlsl",
+			"HLSL": "testingVertex.fxc",
 			"GLSL": "defaultVertex.glsl"
 		},
 		"Fragment": {
-			"HLSL": "testing.hlsl",
+			"HLSL": "testingFragment.fxc",
 			"GLSL": "defaultFragment.glsl"
 		}
 	}

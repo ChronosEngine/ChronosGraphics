@@ -3,14 +3,15 @@
 int main()
 {
 
-    RenderDevice* renderDevice = CreateRenderDevice(RenderType::DX12, "API Testing");
+    RenderDevice* renderDevice = CreateRenderDevice(RenderType::Vulkan, "API Testing");
 
-    Pipeline* testingPipeline = renderDevice->CreatePipeline("C:\\Users\\Steak\\Documents\\ChronosGraphics\\Resources\\Pipelines\\Testing\\Testing.pipeline");
+    Pipeline* testingPipeline = renderDevice->CreatePipeline("C:\\Users\\Caden\\Documents\\Projects\\ChronosGraphics\\Resources\\Pipelines\\Testing\\Testing.pipeline");
 
-    while(!renderDevice->getWindow()->shouldWindowClose())
+    //while(!renderDevice->getWindow()->shouldWindowClose())
     {
-        glfwPollEvents();
+        //glfwPollEvents();
     }
+    system("pause");
 
     delete renderDevice;
 }

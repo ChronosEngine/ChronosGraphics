@@ -21,13 +21,13 @@ Window::Window(
     
     windowSettingsFunc();
 
-    windowHandle = glfwCreateWindow(width, height, windowName, priMonitor, nullptr);
+    m_windowHandle = glfwCreateWindow(width, height, windowName, priMonitor, nullptr);
 }
 
 /** Default Destructor */
 Window::~Window()
 {
-    glfwDestroyWindow(windowHandle);
+    glfwDestroyWindow(m_windowHandle);
 }
 
 
@@ -35,7 +35,7 @@ Window::~Window()
 bool 
 Window::shouldWindowClose()
 {
-    return glfwWindowShouldClose(windowHandle);
+    return glfwWindowShouldClose(m_windowHandle);
 }
 
 /** Set the window size */
@@ -44,7 +44,7 @@ Window::setWindowSize(
     const int sizeX, 
     const int sizeY)
 {
-    glfwSetWindowSize(windowHandle, sizeX, sizeY);
+    glfwSetWindowSize(m_windowHandle, sizeX, sizeY);
 }
 
 /** Get the frame buffer size */
@@ -53,7 +53,7 @@ Window::getFramebufferSize(
     int* sizeX, 
     int* sizeY)
 {
-    glfwGetFramebufferSize(windowHandle, sizeX, sizeY);
+    glfwGetFramebufferSize(m_windowHandle, sizeX, sizeY);
 }
 
 /** Get the windows context scale */
@@ -62,7 +62,7 @@ Window::getContentScale(
     float* sizeX, 
     float* sizeY)
 {
-    glfwGetWindowContentScale(windowHandle, sizeX, sizeY);
+    glfwGetWindowContentScale(m_windowHandle, sizeX, sizeY);
 }
 
 /** Sets how large a window can be */
@@ -73,7 +73,7 @@ Window::setSizeLimits(
     const int maxWidth, 
     const int maxHeight)
 {
-    glfwSetWindowSizeLimits(windowHandle, minWidth, minHeight, maxWidth, maxHeight);
+    glfwSetWindowSizeLimits(m_windowHandle, minWidth, minHeight, maxWidth, maxHeight);
 }
 
 /** Set the window position on screen */
@@ -82,7 +82,7 @@ Window::setPosition(
     const int posX, 
     const int posY)
 {
-    glfwSetWindowPos(windowHandle, posX, posY);
+    glfwSetWindowPos(m_windowHandle, posX, posY);
 }
 
 /** Change the title of the window */
@@ -90,7 +90,7 @@ void
 Window::setTitle(
     const char* title)
 {
-    glfwSetWindowTitle(windowHandle, title);
+    glfwSetWindowTitle(m_windowHandle, title);
 }
 
 /** Change the window opacity */
@@ -98,12 +98,12 @@ void
 Window::setWindowOpacity(
     const float opacity)
 {
-    glfwSetWindowOpacity(windowHandle, opacity);
+    glfwSetWindowOpacity(m_windowHandle, opacity);
 }
 
 /** Get the current window opacity */
 float 
 Window::getWindowOpacity()
 {
-    return glfwGetWindowOpacity(windowHandle);
+    return glfwGetWindowOpacity(m_windowHandle);
 }

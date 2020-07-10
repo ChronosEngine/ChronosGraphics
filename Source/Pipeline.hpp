@@ -29,30 +29,4 @@ public:
 
 };
 
-// Default.pipeline (Pseudofile)
-
-/*
-
-{
-	"Name": "Default Pipeline",
-	"Elements": [
-		{
-			"POSITION": "Vec3"
-		},
-		{
-			"COLOR": "Vec3"
-		}
-	],
-	"Files": [
-		{
-            "Vertex" : "defaultVertex.hlsl"
-        },
-		{
-            "Fragment" : "defaultFragment.hlsl"
-        }
-	]
-}
-
-*/
-
 #endif // __CHRONOS_GRAPHICS_PIPELINE_HPP__

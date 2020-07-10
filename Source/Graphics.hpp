@@ -4,7 +4,7 @@
 /** Chronos Graphics Source Version */
 #define CHRONOS_GRAPHICS_MAJOR 0
 #define CHRONOS_GRAPHICS_MINOR 1
-#define CHRONOS_GRAPHICS_REVIS 1
+#define CHRONOS_GRAPHICS_REVIS 2
 
 #include "Log.hpp"
 #include "Platform.hpp"
